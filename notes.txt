@@ -1,0 +1,82 @@
+Properies
+    A useful component 
+    Our order will be Id Like ____ from _____
+        lets make two props 
+            item
+                What we would like 
+            Restaurant 
+                Where we are getting it from 
+
+const Order = (props) => {
+    return (
+        <div>
+            <p>Order</p>
+            <p>I'd like to {props.item} from {props.restaurant}</p>
+        </div>
+    )
+}
+
+const App = () => (
+    <div>
+        <Order item='pizza' restaurant='Domines />
+    </div>
+);
+ReactDOM.render(<App />, document.getElementById('root'));
+
+Prop Requirements 
+    Properties are for configuring your stuff
+    Props are IMMUTABLE
+    Properies can be strings ''
+        Other types need to be expressed with curly braces {}
+    
+Conditionals in JSX 
+    Functional components can render: 
+        A single valid DOM object 
+        an array of DOM objects
+        null
+Ternary Operator 
+    Its very common as well to use ternary operators when oytu have short conditional statements 
+        const Lottery = (props) => {
+            return (
+                <b>You {props.winner ? "win" : "lose"}!</b>
+            )
+        }
+
+Looping in JSX
+    Its very common to work with arrays of data and loop over them to render JSX 
+    WE USUALLY USE .MAP FOR LOOPING 
+
+    const List = (props) => {
+        return (
+            <div>
+                <h1>{props.name}</h1>
+                <ul>
+                    {props.items.map(item => <li>{item}</li>)}
+                </ul>
+            </div>
+        );
+    }
+
+    Highly recommend using .map 
+        you know that your code is going to run on each element of the array in the right order
+        the original array will be unaffected 
+        its more "declarative"
+
+Key Props  
+    Warning 
+        When you are rendering multiple adjacent elements with JSX REACT is mad at you for now adding a key props
+        At high level, keys help reach idenitfy which items have changed, are added or are removed, they should alway be unique 
+
+    const JokesMap = () => {
+        const jokes = [
+            {
+                id:1, 
+                text:'jokejokejoke
+            }, 
+            {
+                id:2, 
+                text:'yokeyokeyoke'
+            }
+        ]
+    }
+
