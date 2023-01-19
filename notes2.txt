@@ -1,0 +1,41 @@
+CSS
+    make a CSS file for each react component 
+        House.css for House.js 
+    Import at top fo component 
+        House.css at top of House.js 
+    Convientional to add className not class onto div 
+        <div className='house'>
+            <p className='house-title'>{ this.props.title }</p>
+        </div>
+            Usually best to always give the parent element the base name then any children get the basename-attribute
+
+Styling React 
+    You can inline CSS styles, but now style takes a JS object 
+        <li style={{ color:'magenta, backgroundColor:'lightGray' }}>
+    Dynamic styles 
+        <Alert variant='success'> 
+            <h1>Welcome Back</h1>
+        </Alert>
+        <Alert variant='danger'> 
+            <h1>DANGER</h1>
+        </Alert>
+
+Other Important Concepts 
+    A common pattern in React is for a component to return multiple elements instead of just one 
+    To solve this problem, React provides a special tag called a Fragemnt that we can use to wrap our adjacent elements 
+    const BookTitles = () => {
+        return (
+            <React.Fragemnt>
+                <h2>Fellowship</h2>
+                <h2>of</h2>
+                <h2>The Ring</h2>
+            </React.Fragment
+        );
+    }
+
+React Dev Tools 
+    Debugging React 
+        Install 
+
+Warnings 
+    
